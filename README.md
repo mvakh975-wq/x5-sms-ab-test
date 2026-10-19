@@ -1,5 +1,7 @@
 # A/B-тест SMS-рассылки X5: катить или нет
 
+[![CI](https://github.com/mvakh975-wq/x5-sms-ab-test/actions/workflows/ci.yml/badge.svg)](https://github.com/mvakh975-wq/x5-sms-ab-test/actions/workflows/ci.yml)
+
 **Увеличивает ли SMS-рассылка долю покупателей, окупается ли она и на кого её направлять?**
 Полный разбор реального рандомизированного эксперимента торговой сети X5 на 200 039 клиентах:
 проверка сплита, мощность, z-тест, бутстрап, CUPED, сегменты с поправкой на множественные
@@ -30,7 +32,8 @@
 
 ## Как устроен анализ
 
-1. **Данные.** [X5 Retail Hero](https://ods.ai/competitions/x5-retailhero-uplift-modeling):
+1. **Данные.** [X5 Retail Hero](https://ods.ai/competitions/x5-retailhero-uplift-modeling)
+   (файлы скачиваются с [зеркала на Kaggle](https://www.kaggle.com/datasets/mvyurchenko/x5-retail-hero)):
    `uplift_train.csv` — кто получил SMS (`treatment_flg`) и купил ли после коммуникации (`target`);
    `clients.csv` — возраст и пол; `purchases.csv` — 45,8 млн позиций чеков до кампании,
    свёрнутые DuckDB-запросом до 8 045 201 чека ([`scripts/prepare.py`](scripts/prepare.py)).
